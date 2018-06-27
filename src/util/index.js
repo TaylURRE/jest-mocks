@@ -1,0 +1,20 @@
+function randomNumber(min, max) {
+    return Math.random() * (max-min) + min;
+}
+
+function add(...args) {
+    return args.reduce((a, b) => a + b);
+}
+
+function compose(...fns) {
+    fns.reduceRight((f, g) =>
+        (...args) => g(f(...args)),
+         value => value
+    );
+}
+
+export default {
+    add,
+    compose,
+    randomNumber
+}
