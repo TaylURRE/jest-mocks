@@ -21,9 +21,10 @@ export function start(max) {
     const uid = util.add(
         util.randomNumber(10, 50),
         Math.pow(base, exponent),
-        new Date.getTime()
+        new Date().getTime()
     );
 
-    const template = util.compose(templateUID, templateFoobarUtilHeader);
+    const template = util.compose(templateFoobarUtilHeader, templateUID);
     console.log(template(uid));
 }
+

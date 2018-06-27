@@ -7,7 +7,7 @@ function add(...args) {
 }
 
 function compose(...fns) {
-    fns.reduceRight((f, g) =>
+    return fns.reduceRight((f, g) =>
         (...args) => g(f(...args)),
          value => value
     );
