@@ -1,5 +1,5 @@
 function randomNumber(min, max) {
-    return Math.random() * (max-min) + min;
+    return Math.floor(Math.random() * (max-min) + min);
 }
 
 function add(...args) {
